@@ -126,6 +126,7 @@ body {
     font-weight: 800;
     text-decoration: none;
     letter-spacing: -0.5px;
+    
 }
 
 .logo-accent {
@@ -141,7 +142,10 @@ body {
     list-style: none;
     gap: 2rem;
 }
-
+.navbar {
+    margin-left: auto;       /* Isse navbar right side me push ho jayega */
+    margin-right: 2rem;      /* Search/Theme buttons se thoda gap dene ke liye */
+}
 .nav-link {
     text-decoration: none;
     color: var(--text-secondary);
