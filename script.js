@@ -5,18 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // 1. Mobile Hamburger Menu
     // ==========================================
     // HTML mein diye gaye IDs aur classes ke hisaab se elements ko select karna
-    var hamburgerBtn = document.getElementById('hamburgerBtn'); // id="hamburgerBtn"
-    var navLinks = document.querySelector('.nav-links');        // class="nav-links"
-
-    // Agar dono elements exist karte hain tabhi code chalega
-    if (hamburgerBtn && navLinks) {
-        // Jab user hamburger button par click kare
-        hamburgerBtn.addEventListener('click', function() {
-            // nav-links par 'active' class lagao (agar nahi hai) ya hatao (agar hai)
-            // CSS mein hum .active class se menu ko show/hide karte hain
-            navLinks.classList.toggle('active');
-        });
-    }
+   var hamburgerBtn = document.getElementById('hamburgerBtn');
+   var navbar = document.getElementById('navbar');
 
     // ==========================================
     // 2. Dark / Light Theme Switcher
