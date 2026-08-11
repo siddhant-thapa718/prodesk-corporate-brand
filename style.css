@@ -527,7 +527,14 @@ body {
     background-color: var(--bg-secondary);
     border-top: 1px solid var(--border-color);
 }
+.contact-tittle{
+    text-align: center;
+      font-size: 2.25rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.75rem;
 
+}
 .contact-box {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
