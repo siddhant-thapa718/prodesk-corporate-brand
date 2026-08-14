@@ -1,4 +1,3 @@
-// Step 1: Wait for the HTML page to load completely before running Javascript
 document.addEventListener('DOMContentLoaded', function() {
     
     // ==========================================
@@ -7,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     var hamburgerBtn = document.getElementById('hamburgerBtn'); 
     var navbar = document.getElementById('navbar');       
 
-    // Ye block delete ho gaya tha!
     if (hamburgerBtn && navbar) {
         hamburgerBtn.addEventListener('click', function() {
             navbar.classList.toggle('active');
@@ -69,14 +67,29 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ==========================================
-    // 4. Highlight Active Nav Link on Scroll
+    // 4. Highlight Active Nav Link on Scroll (FIXED)
     // ==========================================
     var allNavLinks = document.querySelectorAll('.nav-link');
     var allSections = document.querySelectorAll('section'); 
 
     window.addEventListener('scroll', function() {
         var currentScroll = window.scrollY; 
+        
+        // Magic Trick: Check if we are at the very bottom of the page
+        var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
 
+        if (isAtBottom) {
+            allNavLinks.forEach(function(link) {
+                link.classList.remove('active');
+            });
+            var contactLink = document.querySelector('.nav-link[href="#contact"]');
+            if (contactLink) {
+                contactLink.classList.add('active');
+            }
+            return; 
+        }
+
+        // Normal check for other sections
         allSections.forEach(function(section) {
             var sectionTop = section.offsetTop - 150; 
             var sectionHeight = section.offsetHeight; 
