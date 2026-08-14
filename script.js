@@ -1,9 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-    // ==========================================
-    // 1. Mobile Hamburger Menu
-    // ==========================================
-    var hamburgerBtn = document.getElementById('hamburgerBtn'); 
+             var hamburgerBtn = document.getElementById('hamburgerBtn'); 
     var navbar = document.getElementById('navbar');       
 
     if (hamburgerBtn && navbar) {
@@ -12,10 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ==========================================
-    // 2. Dark / Light Theme Switcher
-    // ==========================================
-    var themeToggle = document.getElementById('themeToggle'); 
+            var themeToggle = document.getElementById('themeToggle'); 
     var body = document.body; 
     
     if (themeToggle) {
@@ -33,11 +27,8 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
-
-    // ==========================================
-    // 3. Search Modal Open/Close
-    // ==========================================
-    var searchBtn = document.getElementById('searchBtn');       
+    
+          var searchBtn = document.getElementById('searchBtn');       
     var searchModal = document.getElementById('searchModal');   
     var closeSearch = document.getElementById('closeSearch');   
     var searchInput = document.getElementById('searchInput');   
@@ -66,17 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ==========================================
-    // 4. Highlight Active Nav Link on Scroll (FIXED)
-    // ==========================================
     var allNavLinks = document.querySelectorAll('.nav-link');
     var allSections = document.querySelectorAll('section'); 
 
     window.addEventListener('scroll', function() {
         var currentScroll = window.scrollY; 
         
-        // Magic Trick: Check if we are at the very bottom of the page
-        var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
+               var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
 
         if (isAtBottom) {
             allNavLinks.forEach(function(link) {
@@ -89,8 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return; 
         }
 
-        // Normal check for other sections
-        allSections.forEach(function(section) {
+               allSections.forEach(function(section) {
             var sectionTop = section.offsetTop - 150; 
             var sectionHeight = section.offsetHeight; 
             var sectionId = section.getAttribute('id'); 
