@@ -550,6 +550,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .glow-orb {
+        display: none;
+    }
+
     .hamburger-btn {
         display: flex;
     }
