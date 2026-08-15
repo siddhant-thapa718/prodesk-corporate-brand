@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     
-             var hamburgerBtn = document.getElementById('hamburgerBtn'); 
+    var hamburgerBtn = document.getElementById('hamburgerBtn'); 
     var navbar = document.getElementById('navbar');       
 
     if (hamburgerBtn && navbar) {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-            var themeToggle = document.getElementById('themeToggle'); 
+    var themeToggle = document.getElementById('themeToggle'); 
     var body = document.body; 
     
     if (themeToggle) {
@@ -28,42 +28,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
     
-          var searchBtn = document.getElementById('searchBtn');       
-    var searchModal = document.getElementById('searchModal');   
-    var closeSearch = document.getElementById('closeSearch');   
-    var searchInput = document.getElementById('searchInput');   
-    
-    if (searchBtn && searchModal) {
-        searchBtn.addEventListener('click', function(event) {
-            event.preventDefault(); 
-            searchModal.classList.add('active'); 
-            if(searchInput) {
-                setTimeout(function() { searchInput.focus(); }, 100);
-            }
-        });
-    }
-
-    if (closeSearch && searchModal) {
-        closeSearch.addEventListener('click', function() {
-            searchModal.classList.remove('active'); 
-        });
-    }
-
-    if (searchModal) {
-        window.addEventListener('click', function(event) {
-            if (event.target === searchModal) {
-                searchModal.classList.remove('active');
-            }
-        });
-    }
-
     var allNavLinks = document.querySelectorAll('.nav-link');
     var allSections = document.querySelectorAll('section'); 
 
     window.addEventListener('scroll', function() {
         var currentScroll = window.scrollY; 
         
-               var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
+        var isAtBottom = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 10;
 
         if (isAtBottom) {
             allNavLinks.forEach(function(link) {
@@ -76,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return; 
         }
 
-               allSections.forEach(function(section) {
+        allSections.forEach(function(section) {
             var sectionTop = section.offsetTop - 150; 
             var sectionHeight = section.offsetHeight; 
             var sectionId = section.getAttribute('id'); 
