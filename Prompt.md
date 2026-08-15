@@ -1,4 +1,3 @@
-# Prodesk IT - Prompt Log
 **Objective:** Generate the complete Sprint 1 Frontend Deliverable.
 
 ---

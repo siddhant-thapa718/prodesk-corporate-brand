@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prodesk IT delivers pixel-perfect web development, high-performance SEO, and data-driven marketing pipelines designed for corporate growth.">
     <title>Prodesk IT | The Corporate Brand</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -10,12 +11,12 @@
 
     <header class="header" id="header">
         <div class="container nav-container">
-            <a href="#home" class="logo">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="logo-icon">
+            <a href="#home" class="logo" aria-label="Prodesk IT Home">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="url(#logo-grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="logo-icon" aria-hidden="true">
                     <defs>
                         <linearGradient id="logo-grad" x1="0%" y1="0%" x2="100%" y2="100%">
-                            <stop offset="0%" stop-color="#2563eb" />
-                            <stop offset="100%" stop-color="#06b6d4" />
+                            <stop offset="0%" stop-color="#1d4ed8" />
+                            <stop offset="100%" stop-color="#0284c7" />
                         </linearGradient>
                     </defs>
                     <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
@@ -35,11 +36,11 @@
             </nav>
 
             <div class="nav-controls">
-                <button id="themeToggle" class="control-btn" aria-label="Toggle Dark/Light Mode">
+                <button id="themeToggle" class="control-btn" aria-label="Toggle Dark Mode">
                     🌙
                 </button>
 
-                <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle Mobile Menu">
+                <button id="hamburgerBtn" class="hamburger-btn" aria-label="Toggle Mobile Menu" aria-expanded="false">
                     <span class="bar"></span>
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -82,17 +83,17 @@
 
                 <div class="about-grid">
                     <div class="about-card">
-                        <div class="about-icon">🚀</div>
+                        <div class="about-icon" aria-hidden="true">🚀</div>
                         <h3>High Velocity</h3>
                         <p>Rapid deployment pipelines ensuring fast time-to-market without compromising clean architecture.</p>
                     </div>
                     <div class="about-card">
-                        <div class="about-icon">🎯</div>
+                        <div class="about-icon" aria-hidden="true">🎯</div>
                         <h3>Pixel Perfection</h3>
                         <p>Strict architectural baseline for Flexbox, Grid, and responsive layout across all viewports.</p>
                     </div>
                     <div class="about-card">
-                        <div class="about-icon">📈</div>
+                        <div class="about-icon" aria-hidden="true">📈</div>
                         <h3>Conversion Focused</h3>
                         <p>Data-informed UX decisions designed to maximize user engagement and business ROI.</p>
                     </div>
@@ -109,7 +110,7 @@
 
                 <div class="services-grid">
                     <article class="service-card">
-                        <div class="card-icon">🔍</div>
+                        <div class="card-icon" aria-hidden="true">🔍</div>
                         <h3 class="card-title">Search Engine Optimization (SEO)</h3>
                         <p class="card-description">
                             Dominate search rankings with technical SEO audits, keyword strategy, high-authority backlinking, and performance tuning.
@@ -119,7 +120,7 @@
 
                     <article class="service-card highlight-card">
                         <span class="card-badge">Popular</span>
-                        <div class="card-icon">💻</div>
+                        <div class="card-icon" aria-hidden="true">💻</div>
                         <h3 class="card-title">Web Development & Architecture</h3>
                         <p class="card-description">
                             Custom frontend modules built with semantic HTML5, CSS Grid/Flexbox, accessibility standards, and 100/100 Lighthouse performance.
@@ -128,7 +129,7 @@
                     </article>
 
                     <article class="service-card">
-                        <div class="card-icon">📊</div>
+                        <div class="card-icon" aria-hidden="true">📊</div>
                         <h3 class="card-title">Performance Marketing</h3>
                         <p class="card-description">
                             Data-driven ad campaigns across Google, Meta, and LinkedIn designed to lower customer acquisition costs and drive leads.
@@ -146,7 +147,8 @@
                     <h2>Ready to Elevate Your Digital Brand?</h2>
                     <p>Connect with the Prodesk IT engineering team today for a free consultation.</p>
                     <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for contacting Prodesk IT!');">
-                        <input type="email" placeholder="Enter your business email" required aria-label="Business Email">
+                        <label for="emailInput" class="sr-only">Business Email</label>
+                        <input type="email" id="emailInput" placeholder="Enter your business email" required aria-label="Business Email" title="Enter your business email">
                         <button type="submit" class="btn btn-primary">Request Consultation</button>
                     </form>
                 </div>
@@ -157,16 +159,16 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="footer-brand">
-                <a href="#home" class="logo">
+                <a href="#home" class="logo" aria-label="Prodesk IT Footer Logo">
                     <span class="logo-accent">Prodesk</span><span class="logo-text">IT</span>
                 </a>
                 <p class="footer-tagline">Building digital experiences that scale.</p>
             </div>
             <p class="copyright-text">&copy; 2026 Prodesk IT. All rights reserved. Corporate Brand | +911234567899</p>
             <div class="social-links">
-                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">🔗</a>
-                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">💻</a>
-                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">🐦</a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">🔗<span class="sr-only">LinkedIn</span></a>
+                <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">💻<span class="sr-only">GitHub</span></a>
+                <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">🐦<span class="sr-only">Twitter</span></a>
             </div>
         </div>
     </footer>
