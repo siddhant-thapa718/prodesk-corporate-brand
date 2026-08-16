@@ -1,7 +1,5 @@
 **Objective:** Generate the complete Sprint 1 Frontend Deliverable.
 
----
-
 **Prompt used to generate this project:**
 
 Act as a Frontend Developer. Build a corporate IT landing page for a company named 'Prodesk IT'. 
